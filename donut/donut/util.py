@@ -63,6 +63,8 @@ class DonutDataset(Dataset):
 
         self.dataset = load_dataset(dataset_name_or_path, split=self.split)
         self.dataset_length = len(self.dataset)
+        print("Dataset Size")
+        print(self.dataset_length)
 
         self.gt_token_sequences = []
         for sample in self.dataset:
